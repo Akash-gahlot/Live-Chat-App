@@ -43,8 +43,10 @@ function App() {
       <br />
         <br />
         </>
-      ):(
-      <Chatwindow socket={socketRef.current } username={username} roomid={roomid} />
+      ) : (
+          <div className="chat-wrapper">
+            <Chatwindow socket={socketRef.current} username={username} roomid={roomid} />
+            </div>
       )}
     </div>
   );

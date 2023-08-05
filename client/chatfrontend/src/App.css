@@ -1,4 +1,10 @@
 /* ChatWindow.css */
+.chat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .chat-window {
   border: 1px solid #ccc;
   border-radius: 8px;
