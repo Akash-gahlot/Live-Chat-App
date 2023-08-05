@@ -53,7 +53,7 @@ const Chatwindow = ({ socket, username, roomid }) => {
         {messagelist.map((message, index) => (
           <div key={index} className={`message ${username==message.user ? 'outgoing' : 'incoming'}`}>
             <div className="message-content">
-              <div className="username">{message.user}</div>
+                    <div className="username">{ username==message.user?"You":message.user}</div>
               <div className="text">{message.message}</div>
               <div className="time">{message.time}</div>
             </div>
