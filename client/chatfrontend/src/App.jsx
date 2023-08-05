@@ -13,9 +13,9 @@ function App() {
   const socketRef = useRef(); 
   useEffect(() => { 
     socketRef.current = io.connect("http://localhost:3001");
-    return () => {
-      socketRef.current.disconnect(); // Clean up when the component unmounts
-    };
+    // return () => {
+    //   socketRef.current.disconnect(); // Clean up when the component unmounts
+    // };
   },[])
   function joinroom() { 
     if (username !== "" && roomid !== "") { 
@@ -32,14 +32,14 @@ function App() {
         Live Chat App
       </h1>
       {!showchat ? (  <>
-      <input type="text" placeholder="Your name" name="user" onChange={(e) => setusername(e.target.value)} />
+      <input type="text" placeholder="your name" name="user" onChange={(e) => setusername(e.target.value)} />
       <br />
       <br />
     
-      <input type="text" placeholder="room id" name="room" onChange={(e) => setroomid(e.target.value)} />
+      <input type="text" placeholder="Room Id" name="room" onChange={(e) => setroomid(e.target.value)} />
       <br />
       <br />
-      <button onClick={joinroom} >Join Room</button>
+      <button onClick={joinroom} >Join Room..</button>
       <br />
         <br />
         </>
